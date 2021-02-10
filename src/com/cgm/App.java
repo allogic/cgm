@@ -107,6 +107,10 @@ public class App
             answers.add(answer.substring(0, Math.min(255, answer.length())));
         }
 
+        // Questions must have at least one answer
+        if (answers.size() == 0)
+            return 1;
+
         AddQuestion(question, answers);
 
         return 0;
